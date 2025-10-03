@@ -1,7 +1,7 @@
 ﻿
 import { connect } from 'cloudflare:sockets';
 
-let userID = '';
+let userID = 'alilaikafinn';
 let proxyIP = '';
 let DNS64Server = '';
 //let sub = '';
@@ -87,9 +87,9 @@ let allowInsecure = '&allowInsecure=1';
  * its intended functions without any risk of harm or data compromise.
  */
 export default {
-    async fetch(request, env, ctx) {
+    async fetch(请求, env, ctx) {
         try {
-            const UA = request.headers.get('User-Agent') || 'null';
+            const UA = 请求.headers.get('User-Agent') || 'null';
             const userAgent = UA.toLowerCase();
             userID = env.UUID || env.uuid || env.PASSWORD || env.pswd || userID;
             if (env.KEY || env.TOKEN || (userID && !isValidUUID(userID))) {
@@ -7175,4 +7175,5 @@ function config_Html(token = "test", proxyhost = "") {
 </html>`;
 
     return html;
+
 }
